@@ -664,10 +664,27 @@ Pricing
     background: #f7fafc;
 }
 
+.plan:nth-child(3) .plan__button{
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+.plan:nth-child(2){
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+}
+
 .plan__stripe{
     color: #f7fafc;
     background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
 }
+
+.plan:nth-child(2) .plan__stripe{
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+}
+
+.plan:nth-child(3) .plan__stripe{
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
 
 .plan__stripe{
     position: absolute;
@@ -1131,22 +1148,28 @@ Tablets, large phones
         border: none;
     }
 
-    header .row{
+    header .row, #quality .row, #steps .row, #testimonials .row{
         flex-direction: column;
         align-items: center;
     }
 
-    .header__description{
+    .header__description, .quality__desc, .steps__desc, .testimonials__desc{
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-left: 0px;
+        margin-right: 0px;
+        width: 65%;
     }
 
-    .header__desc--para{
-        margin: 20px 0;
+    .header__desc--para, .quality__img--wrapper, .steps__img--wrapper, .testimonials__img{
+        margin: 40px 0;
         font-size: 16px;
+        align-items: center;
+        width: 65%;
     }
+
 
     .header__img--wrapper{
         display: flex;
@@ -1156,6 +1179,33 @@ Tablets, large phones
     .header__description, .header__img--wrapper{
         width: 100%;
         max-width: 512px;
+        margin: 0 auto;
+    }
+
+    #values .row{
+        flex-direction: column-reverse;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .values__desc, .values__img{
+        width: 100%;
+        max-width: 448px;
+    }
+
+    .values__desc{
+        margin-top: 64px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .value__list{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .value__title{
         margin: 0 auto;
     }
 
@@ -1232,6 +1282,57 @@ Tablets, large phones
     .footer__columns{
         justify-content: center;
     }
+
+    .start__container{
+        padding: 80px 0px;
+     }
+
+     .start__row{
+        flex-direction: column;
+     }
+
+     .start__title{
+        font-size: 24px;
+     }
+
+     .start__buttons{
+        flex-direction: column;
+     }
+
+     .start__button{
+        font-size: 14px;
+        padding: 12px 24px;
+     }
+
+     .start__button:nth-child(1){
+        margin-right: 0px;
+     }
+
+     .start__button:nth-child(2){
+        margin-top: 16px;
+     }
+
+     .footer__column{
+        width: auto;
+        text-align: center;
+        align-items: center;
+        padding: 0px 48px;
+     }
+
+     .footer__bottom{
+        flex-direction: column;
+        align-items: center;
+     }
+
+     .footer__copyright{
+        font-size: 14px;
+        align-items: center;
+        line-height: 1.5;
+     }
+
+     .footer__copyright, .footer__socials{
+        margin-top: 32px;
+     }
 }
 
 @media (max-width: 640px){
